@@ -16,12 +16,14 @@ function App() {
     const newTask = {id: taskList.length +1, textTask: text, finished: false}
 
     setTaskList([...taskList, newTask])
+
   }
 
   return (
     <>
     <CardAdicionar addTask={addTask}/>
-    <div>{taskList.map(task => (<span>{task.textTask} - {task.id}</span>))}</div>
+    <div>{taskList.map(task => (
+      <ListItem key={task.id} textTask={task.textTask} done={task.done}/>))}</div>
     </>
   )
 }
