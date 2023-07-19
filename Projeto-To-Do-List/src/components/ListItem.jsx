@@ -13,6 +13,7 @@ function ListItem(props) {
                     <h4>{props.textTask}</h4>
                     <input type="checkbox" checked={done} />
                     <button onClick={() => setDone(!done)}>Done!</button>
+                    <button onClick={() => props.deleteTask(props.id)}>Delete</button>
                 </div>
                 )
     
