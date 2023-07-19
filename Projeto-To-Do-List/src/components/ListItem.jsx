@@ -9,11 +9,11 @@ function ListItem(props) {
     const [done, setDone] = useState(props.done)
 
         return (
-                <div>
-                    <h4>{props.textTask}</h4>
+                <div class="container">
                     <input type="checkbox" checked={done} />
-                    <button onClick={() => setDone(!done)}>Done!</button>
-                    <button onClick={() => props.deleteTask(props.id)}>Delete</button>
+                    <h4 style= {done && {textDecoration:"line-through"}}>{props.textTask}</h4>
+                    <button class="btn btn-done" onClick={() => setDone(!done)}>DONE!</button>
+                    <button class="btn btn-del" onClick={() => props.deleteTask(props.id)}>DELETE!</button>
                 </div>
                 )
     

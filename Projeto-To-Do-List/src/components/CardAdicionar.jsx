@@ -5,6 +5,7 @@
 // 4 - faça o botão chamar a função de adicionar tarefa
 // Este componente deve receber como prop a função para criar a tarefa e adicionar a lista de tarefas.
 import { useState } from "react";
+import "./style.css"
 
 function CardAdicionar(props) {
 
@@ -27,7 +28,7 @@ function CardAdicionar(props) {
                 />
                 <div>
                 <br></br>
-                    <button onClick={() => handleAddTask()}>Add New Task!</button>
+                    <button class="btn-add" onClick={() => handleAddTask()}>Add New Task!</button>
                 </div>
         </div>
     )

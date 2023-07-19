@@ -1,0 +1,37 @@
+*{
+    background-color: rgb(212, 212, 212);
+}
+.container {
+    display: flex;
+    background-color: #d8d7d7;
+    border-radius: 10px;
+    margin:20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    font-size: 12px;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+.btn-done {
+    background-color: #124c81;
+    color:white;
+}
+
+.btn-del {
+    background-color: #d6542c;
+    color:white;
+}
+
+.btn-add {
+    background-color: #99a8bb;
+    border-radius: 10px;
+    border-color: rgb(88, 88, 88);
+}
+
+input[type="text"]{
+    background-color: white;
+}
