@@ -18,12 +18,17 @@ function App() {
     setTaskList([...taskList, newTask])
 
   }
+  const deleteTask = (id) => {
+    const newList = taskList.filter (item => item.id != id)
+
+    setTaskList(newList)
+  }
 
   return (
     <>
     <CardAdicionar addTask={addTask}/>
     <div>{taskList.map(task => (
-      <ListItem key={task.id} textTask={task.textTask} done={task.done}/>))}</div>
+      <ListItem key={task.id} id={task.id} deleteTask={deleteTask} textTask={task.textTask} done={task.done}/>))}</div>
     </>
   )
 }
