@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import CardAdicionar from './Components/CardAdicionar'
+import ListItem from './components/ListItem'
 
 function App() {
 
