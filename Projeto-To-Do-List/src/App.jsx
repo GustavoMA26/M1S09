@@ -4,13 +4,23 @@ import CardAdicionar from './Components/CardAdicionar'
 
 function App() {
 
-  const [taskList, setTaskList] = useState([
-    {id: 1, task: "Tarefa 1", finished: false}
-  ]) 
+  const [taskList, setTaskList] = useState([]) 
+
+  const addTask = (text) => {
+    if (text == "") {
+      alert("Did you insert a new task?!")
+      return
+    }
+
+    const newTask = {id: taskList.length +1, textTask: text, finished: false}
+
+    setTaskList([...taskList, newTask])
+  }
 
   return (
     <>
-    <CardAdicionar />
+    <CardAdicionar addTask={addTask}/>
+    <div>{taskList.map(task => (<span>{task.textTask} - {task.id}</span>))}</div>
     </>
   )
 }

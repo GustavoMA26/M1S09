@@ -7,25 +7,24 @@
 // Este componente deve receber como prop a função para criar a tarefa e adicionar a lista de tarefas.
 import { useState } from "react";
 
-function CardAdicionar() {
+function CardAdicionar(props) {
 
     const [task, setTask] = useState("")
 
     return (
         <div>
-            <h1>Cadastro de Tarefa</h1>
-            <form>
-                <label htmlFor="task">Tarefa:</label>
+            <h1>Task List</h1>
+                <label htmlFor="task">Task:</label>
                 <input 
                     type= "text" 
                     value= {task}
-                    placeholder= "Digite aqui a tarefa"
+                    placeholder= "Write here your new task"
                     onChange= {(e) => setTask(e.target.value)} 
                 />
                 <div>
-                    <button onClick={() => {}} type="submit" value="cadastrar">Adicionar</button>
+                <br></br>
+                    <button onClick={() => props.addTask(task)}>Add New Task!</button>
                 </div>
-            </form>
         </div>
     )
 
